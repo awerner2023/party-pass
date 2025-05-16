@@ -5,7 +5,7 @@ export default function LoginScreen() {
     return (
         <View style={styles.container}>
             <Text>Party Pass</Text>
-            <CustomButton title='Login'/>
+            <CustomButton title={'Login'}/>
         </View>
     )
 }
