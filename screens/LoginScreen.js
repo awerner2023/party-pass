@@ -14,9 +14,11 @@ export default function LoginScreen() {
             ></TextInput>
             <Spacer height={spacerSize}/>
             <Text style = {{color : '#007AFF', fontSize: 12}}> Forgot your password?</Text>
-            <Spacer height={5}/>
+            <Spacer height={3}/>
             <CustomButton title={'Login'}/>
             <Spacer height={spacerSize}/>
+            <Text style = {{color : '#007AFF', fontSize: 12}}>First time using Party Pass</Text>
+            <Spacer height={3}/>
             <CustomButton title={'Create Account'}/>
         </View>
     )
