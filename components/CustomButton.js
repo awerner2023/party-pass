@@ -13,11 +13,11 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: '#6C5CE7',
         borderRadius: 20,
-        padding: 15,
+        padding: 10,
+        width: '45%',
     },
     text: {
-        fontSize: 20,
-        fontWeight: 'bold',
+        fontSize: 15,
         fontFamily: 'System',
     },
         })
