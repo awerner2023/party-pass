@@ -1,7 +1,6 @@
 import {StyleSheet, Text, TextInput, View} from 'react-native';
 import CustomButton from '../components/CustomButton';
 import Spacer from '../components/Spacer';
-import spacer from "../components/Spacer";
 
 export default function LoginScreen() {
     return (
