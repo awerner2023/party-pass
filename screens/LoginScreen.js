@@ -1,23 +1,29 @@
 import {StyleSheet, Text, TextInput, View} from 'react-native';
 import CustomButton from '../components/CustomButton';
 import Spacer from '../components/Spacer';
+import spacer from "../components/Spacer";
+
 export default function LoginScreen() {
     return (
         <View style={styles.container}>
-            <TextInput style = {styles.textBox}
+            <TextInput style={styles.textBox}
                        placeholder={'Username'}
             ></TextInput>
-            <Spacer height={5} />
-            <TextInput style = {styles.textBox}
+            <Spacer height={spacerSize} />
+            <TextInput style={styles.textBox}
                        placeholder={'Password'}
             ></TextInput>
-            <Spacer height={5} />
+            <Spacer height={spacerSize}/>
+            <Text style = {{color : '#007AFF', fontSize: 12}}> Forgot your password?</Text>
+            <Spacer height={5}/>
             <CustomButton title={'Login'}/>
-            <Spacer height={5} />
+            <Spacer height={spacerSize}/>
             <CustomButton title={'Create Account'}/>
         </View>
     )
 }
+
+const spacerSize = 10
 
 const styles = StyleSheet.create({
     container: {
