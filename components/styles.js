@@ -8,6 +8,15 @@ export const colors = {
     borderColorBlack: "#333333",
 }
 
+export const textStyles = {
+    headerText: {
+        fontStyle: 'System',
+        fontWeight: 700,
+        fontSize: RFValue(30),
+        color: colors.whiteBackground
+    }
+}
+
 export const containerStyle = StyleSheet.create({
     container: {
         flex: 1,
@@ -26,4 +35,12 @@ export const containerStyle = StyleSheet.create({
         borderRadius: RFValue(20),
         textAlign: 'center',
     },
+    header: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: colors.purpleBackground,
+        height: RFValue(60),
+        width: '100%',
+        padding: RFValue(5),
+    }
 })
