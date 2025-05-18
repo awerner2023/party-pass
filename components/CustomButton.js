@@ -1,5 +1,5 @@
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
-import {RFPercentage, RFValue} from "react-native-responsive-fontsize";
+import {RFValue} from "react-native-responsive-fontsize";
 
 export default function CustomButton({title}) {
     return(
