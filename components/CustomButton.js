@@ -1,4 +1,5 @@
 import {StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {RFPercentage, RFValue} from "react-native-responsive-fontsize";
 
 export default function CustomButton({title}) {
     return(
@@ -17,7 +18,7 @@ const styles = StyleSheet.create({
         width: '45%',
     },
     text: {
-        fontSize: 15,
+        fontSize: RFValue(15),
         fontFamily: 'System',
     },
         })

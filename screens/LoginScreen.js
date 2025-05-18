@@ -1,6 +1,7 @@
 import {StyleSheet, Text, TextInput, View} from 'react-native';
 import CustomButton from '../components/CustomButton';
 import Spacer from '../components/Spacer';
+import {RFValue} from "react-native-responsive-fontsize";
 
 export default function LoginScreen() {
     return (
@@ -8,16 +9,16 @@ export default function LoginScreen() {
             <TextInput style={styles.textBox}
                        placeholder={'Username'}
             ></TextInput>
-            <Spacer height={spacerSize} />
+            <Spacer height={spacerSize}/>
             <TextInput style={styles.textBox}
                        placeholder={'Password'}
             ></TextInput>
             <Spacer height={spacerSize}/>
-            <Text style = {{color : '#007AFF', fontSize: 12}}> Forgot your password?</Text>
+            <Text style={{color: '#007AFF', fontSize: RFValue(12)}}> Forgot your password?</Text>
             <Spacer height={3}/>
             <CustomButton title={'Login'}/>
             <Spacer height={spacerSize}/>
-            <Text style = {{color : '#007AFF', fontSize: 12}}>First time using Party Pass</Text>
+            <Text style={{color: '#007AFF', fontSize: RFValue(12)}}>First time using Party Pass</Text>
             <Spacer height={3}/>
             <CustomButton title={'Create Account'}/>
         </View>
