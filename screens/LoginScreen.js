@@ -4,6 +4,8 @@ import Spacer from '../components/Spacer';
 import {RFValue} from "react-native-responsive-fontsize";
 import {colors, containerStyle} from '../components/styles'
 
+const spacerSize = 10;
+
 export default function LoginScreen() {
     return (
         <SafeAreaView style={containerStyle.container}>
@@ -25,5 +27,3 @@ export default function LoginScreen() {
         </SafeAreaView>
     )
 }
-
-const spacerSize = 10;

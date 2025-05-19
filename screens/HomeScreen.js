@@ -2,13 +2,16 @@ import {View, Text, Pressable, ScrollView, Platform, SafeAreaView} from 'react-n
 import {colors, containerStyle, textStyles} from "../components/styles";
 import {RFValue} from "react-native-responsive-fontsize";
 
+const data = [
+    {}
+]
 export default function HomeScreen() {
     return (
         <SafeAreaView style={containerStyle.container}>
             <View style={containerStyle.header}>
                 <Text style ={textStyles.headerText}>My Events</Text>
             </View>
-        <ScrollView></ScrollView>
+            <ScrollView></ScrollView>
         </SafeAreaView>
     )
 }

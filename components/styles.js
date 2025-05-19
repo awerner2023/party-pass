@@ -11,7 +11,7 @@ export const colors = {
 export const textStyles = {
     headerText: {
         fontStyle: 'System',
-        fontWeight: 700,
+        fontWeight: RFValue(600),
         fontSize: RFValue(30),
         color: colors.whiteBackground
     }
@@ -25,7 +25,14 @@ export const containerStyle = StyleSheet.create({
         backgroundColor: colors.whiteBackground,
     },
     eventContainer: {
+        flex: 1,
         backgroundColor: colors.whiteBackground,
+        borderWidth: 1,
+        borderColor: colors.borderColorBlack,
+        borderRadius: RFValue(5),
+        padding: RFValue(10),
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     textBoxContainer: {
         height: RFValue(40),
