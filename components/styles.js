@@ -33,6 +33,7 @@ export const containerStyle = StyleSheet.create({
         padding: RFValue(10),
         justifyContent: 'center',
         alignItems: 'center',
+        width: '100%',
     },
     textBoxContainer: {
         height: RFValue(40),
