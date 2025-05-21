@@ -6,6 +6,7 @@ export const colors = {
     blueText: "#007AFF",
     whiteBackground: "#FAFAFA",
     borderColorBlack: "#333333",
+    eventButtonBackgroundColor: "#F0F0F0",
 }
 
 export const textStyles = {
@@ -24,16 +25,29 @@ export const containerStyle = StyleSheet.create({
         alignItems: 'center',
         backgroundColor: colors.whiteBackground,
     },
-    eventContainer: {
+    scrollView: {
+      flex: 1,
+      width: '100%',
+    },
+    scrollViewButtonAlignment: {
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    eventView: {
         flex: 1,
         backgroundColor: colors.whiteBackground,
-        borderWidth: 1,
-        borderColor: colors.borderColorBlack,
-        borderRadius: RFValue(5),
         padding: RFValue(10),
         justifyContent: 'center',
         alignItems: 'center',
         width: '100%',
+    },
+    eventButton: {
+        borderWidth: 1,
+        borderColor: colors.borderColorBlack,
+        borderRadius: RFValue(5),
+        padding: RFValue(5),
+        width: '90%',
+        backgroundColor: colors.eventButtonBackgroundColor,
     },
     textBoxContainer: {
         height: RFValue(40),
