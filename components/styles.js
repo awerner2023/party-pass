@@ -7,6 +7,8 @@ export const colors = {
     whiteBackground: "#FAFAFA",
     borderColorBlack: "#333333",
     eventButtonBackgroundColor: "#F0F0F0",
+    pureWhite: "#FFFFFF",
+    pureBlack: "#000"
 }
 
 export const textStyles = {
@@ -47,7 +49,12 @@ export const containerStyle = StyleSheet.create({
         borderRadius: RFValue(5),
         padding: RFValue(5),
         width: '90%',
-        backgroundColor: colors.eventButtonBackgroundColor,
+        // shadow settings
+        backgroundColor: colors.pureWhite,
+        shadowColor: colors.pureBlack,
+        shadowOffset: {width: 0, height: 2},
+        shadowOpacity: 0.2,
+        shadowRadius: 5,
     },
     textBoxContainer: {
         height: RFValue(40),
