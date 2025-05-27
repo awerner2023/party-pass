@@ -49,7 +49,7 @@ export const containerStyle = StyleSheet.create({
         borderRadius: RFValue(5),
         padding: RFValue(5),
         width: '90%',
-        // shadow settings
+        //IOS shadow settings
         backgroundColor: colors.pureWhite,
         shadowColor: colors.pureBlack,
         shadowOffset: {width: 0, height: 2},
@@ -71,5 +71,17 @@ export const containerStyle = StyleSheet.create({
         height: RFValue(60),
         width: '100%',
         padding: RFValue(5),
+    },
+    tabNavigator: {
+        tabBarStyle: {
+            padding: RFValue(10),
+            backgroundColor: colors.purpleBackground,
+        },
+        tabBarActiveTintColor: colors.pureWhite,
+        tabBarInactiveTintColor: colors.pureBlack,
+        tabBarLabelStyle: {
+            fontStyle: 'System',
+            fontSize: RFValue(15),
+        },
     }
 })
