@@ -1,14 +1,15 @@
-import {SafeAreaView, StyleSheet, Text, TextInput, View} from 'react-native';
+import {StyleSheet, Text, TextInput, View} from 'react-native';
 import CustomButton from '../components/CustomButton';
 import Spacer from '../components/Spacer';
 import {RFValue} from "react-native-responsive-fontsize";
 import {colors, containerStyle} from '../components/styles'
+import ScreenWrapper from "../components/ScreenWrapper";
 
 const spacerSize = 10;
 
 export default function LoginScreen() {
     return (
-        <SafeAreaView style={containerStyle.container}>
+        <ScreenWrapper>
             <TextInput style={containerStyle.textBoxContainer}
                        placeholder={'Username'}
             ></TextInput>
@@ -24,6 +25,6 @@ export default function LoginScreen() {
             <Text style={{color: colors.blueText, fontSize: RFValue(12)}}>First time using Party Pass</Text>
             <Spacer height={3}/>
             <CustomButton title={'Create Account'}/>
-        </SafeAreaView>
+        </ScreenWrapper>
     )
 }

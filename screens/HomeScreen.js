@@ -1,14 +1,13 @@
-import {View, Text, Pressable, ScrollView, SafeAreaView} from 'react-native';
-import {colors, containerStyle, textStyles} from "../components/styles";
-import {RFValue} from "react-native-responsive-fontsize";
+import {View, Text, ScrollView} from 'react-native';
+import {containerStyle, textStyles} from "../components/styles";
 import EventButton from "../components/EventButton";
-
+import ScreenWrapper from "../components/ScreenWrapper";
 const data = [
     {}
 ]
 export default function HomeScreen() {
     return (
-        <SafeAreaView style={containerStyle.container}>
+        <ScreenWrapper>
             <View style={containerStyle.header}>
                 <Text style ={textStyles.headerText}>My Events</Text>
             </View>
@@ -17,6 +16,6 @@ export default function HomeScreen() {
                 <EventButton title = {"AGR FROSH"} date = {'May 20, 2025'}/>
             </ScrollView>
             </View>
-        </SafeAreaView>
+        </ScreenWrapper>
     )
 }
