@@ -76,6 +76,7 @@ export const containerStyle = StyleSheet.create({
         tabBarStyle: {
             padding: RFValue(10),
             backgroundColor: colors.purpleBackground,
+            marginBottom: RFValue(15),
         },
         tabBarActiveTintColor: colors.pureWhite,
         tabBarInactiveTintColor: colors.pureBlack,

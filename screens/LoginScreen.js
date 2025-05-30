@@ -10,21 +10,21 @@ const spacerSize = 10;
 export default function LoginScreen() {
     return (
         <ScreenWrapper>
-            <TextInput style={containerStyle.textBoxContainer}
-                       placeholder={'Username'}
-            ></TextInput>
-            <Spacer height={spacerSize}/>
-            <TextInput style={containerStyle.textBoxContainer}
-                       placeholder={'Password'}
-            ></TextInput>
-            <Spacer height={spacerSize}/>
-            <Text style={{color: colors.blueText, fontSize: RFValue(12)}}> Forgot your password?</Text>
-            <Spacer height={3}/>
-            <CustomButton title={'Login'}/>
-            <Spacer height={spacerSize}/>
-            <Text style={{color: colors.blueText, fontSize: RFValue(12)}}>First time using Party Pass</Text>
-            <Spacer height={3}/>
-            <CustomButton title={'Create Account'}/>
+                <TextInput style={containerStyle.textBoxContainer}
+                           placeholder={'Username'}
+                ></TextInput>
+                <Spacer height={spacerSize}/>
+                <TextInput style={containerStyle.textBoxContainer}
+                           placeholder={'Password'}
+                ></TextInput>
+                <Spacer height={spacerSize}/>
+                <Text style={{color: colors.blueText, fontSize: RFValue(12)}}> Forgot your password?</Text>
+                <Spacer height={3}/>
+                <CustomButton title={'Login'}/>
+                <Spacer height={spacerSize}/>
+                <Text style={{color: colors.blueText, fontSize: RFValue(12)}}>First time using Party Pass</Text>
+                <Spacer height={3}/>
+                <CustomButton title={'Create Account'}/>
         </ScreenWrapper>
     )
 }
