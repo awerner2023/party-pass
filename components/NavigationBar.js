@@ -11,9 +11,7 @@ export default function NavigationBar() {
     return (<NavigationContainer>
             <TabNavigator.Navigator
                 screenOptions={containerStyle.tabNavigator}>
-                <TabNavigator.Screen name='Home' component={HomeScreen} options={{headerShown: false} }
-                    <Ionicons name={'home'} size = '24' color={'black'}/>
-                />
+                <TabNavigator.Screen name='Home' component={HomeScreen} options={{headerShown: false} }/>
                 <TabNavigator.Screen name='Login' component={LoginScreen} options={{headerShown: false}}/>
                 <TabNavigator.Screen name='Profile' component={ProfileScreen} options={{headerShown: false}}/>
             </TabNavigator.Navigator>
