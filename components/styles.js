@@ -44,11 +44,13 @@ export const containerStyle = StyleSheet.create({
         width: '100%',
     },
     eventButton: {
+        flexDirection: 'row',
         borderWidth: 1,
         borderColor: colors.borderColorBlack,
         borderRadius: RFValue(5),
         padding: RFValue(5),
         width: '90%',
+        justifyContent: 'space-between',
         //IOS shadow settings
         backgroundColor: colors.pureWhite,
         shadowColor: colors.pureBlack,
