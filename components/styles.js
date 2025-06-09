@@ -74,9 +74,13 @@ export const containerStyle = StyleSheet.create({
     },
     tabNavigator: {
         tabBarStyle: {
-            padding: RFValue(10),
+            paddingVertical: RFValue(20),
             backgroundColor: colors.purpleBackground,
             marginBottom: RFValue(15),
+        },
+        tabBarItemStyle: {
+            alignItems: 'center',
+            justifyContent: 'space-between',
         },
         tabBarActiveTintColor: colors.pureWhite,
         tabBarInactiveTintColor: colors.pureBlack,
