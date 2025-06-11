@@ -24,6 +24,7 @@ export default function NavigationBar() {
                     },
             ... containerStyle.tabNavigator
             })}>
+                <TabNavigator.Screen name="Login" component={LoginScreen} />
                 <TabNavigator.Screen name='Home' component={HomeScreen} options={{headerShown: false}}/>
                 <TabNavigator.Screen name='Profile' component={ProfileScreen} options={{headerShown: false}}/>
             </TabNavigator.Navigator>

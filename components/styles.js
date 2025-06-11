@@ -51,8 +51,10 @@ export const containerStyle = StyleSheet.create({
         padding: RFValue(5),
         width: '90%',
         justifyContent: 'space-between',
-        //IOS shadow settings
         backgroundColor: colors.pureWhite,
+    },
+        //IOS shadow settings
+    iosShadow: {
         shadowColor: colors.pureBlack,
         shadowOffset: {width: 0, height: 2},
         shadowOpacity: 0.2,

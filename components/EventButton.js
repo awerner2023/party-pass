@@ -5,7 +5,7 @@ import {RFValue} from "react-native-responsive-fontsize";
 
 export default function EventButton({title, date}) {
     return (
-        <TouchableOpacity style={containerStyle.eventButton}>
+        <TouchableOpacity style={[containerStyle.eventButton, containerStyle.iosShadow]}>
             <View>
                 <Text>{title}</Text>
                 <Text>{date}</Text>
