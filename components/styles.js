@@ -23,6 +23,7 @@ export const textStyles = {
 export const containerStyle = StyleSheet.create({
     container: {
         flex: 1,
+        width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: colors.whiteBackground,
