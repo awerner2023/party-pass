@@ -11,6 +11,9 @@ export default function ProfileScreen() {
                 <Text style ={textStyles.headerText}>My Profile</Text>
             </View>
             <View style={containerStyle.container}>
+
+            </View>
+            <View style={containerStyle.container}>
                 <CustomButton title={'Log Out'}></CustomButton>
             </View>
         </ScreenWrapper>
