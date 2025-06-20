@@ -11,9 +11,8 @@ export default function ProfileScreen() {
                 <Text style ={textStyles.headerText}>My Profile</Text>
             </View>
             <View style={containerStyle.container}>
-
             </View>
-            <View style={containerStyle.container}>
+            <View style={[containerStyle.container, {position: 'absolute', bottom: RFValue(20)}]}>
                 <CustomButton title={'Log Out'}></CustomButton>
             </View>
         </ScreenWrapper>
