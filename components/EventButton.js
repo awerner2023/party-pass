@@ -2,7 +2,7 @@ import {Pressable, Text, TouchableOpacity, View} from 'react-native';
 import {colors, containerStyle} from "./styles";
 import {Ionicons} from "@expo/vector-icons";
 import {RFValue} from "react-native-responsive-fontsize";
-import ButtonHandler from "./EventButtonHandler";
+import ButtonHandler from "./AlertMessage";
 
 export default function EventButton({title, date}) {
     return (

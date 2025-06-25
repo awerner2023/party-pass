@@ -2,9 +2,9 @@ import {StyleSheet, Text, TouchableOpacity} from 'react-native';
 import {RFValue} from "react-native-responsive-fontsize";
 import {colors, containerStyle} from "./styles";
 
-export default function CustomButton({title}) {
+export default function CustomButton({title, style, onPress}) {
     return(
-        <TouchableOpacity style={[styles.button, containerStyle.iosShadow]} onPress={ () => {}}>
+        <TouchableOpacity style={[styles.button, containerStyle.iosShadow, style]} onPress={ () => {}}>
             <Text style={[styles.text]}>{title}</Text>
         </TouchableOpacity>
     );

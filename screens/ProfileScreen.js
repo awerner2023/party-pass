@@ -12,8 +12,11 @@ export default function ProfileScreen() {
             </View>
             <View style={containerStyle.container}>
             </View>
+            <View style={[containerStyle.container, {position: 'absolute', bottom: RFValue(100)}]}>
+                <CustomButton style={{width: '60%'}} title={'Event Mode'}></CustomButton>
+            </View>
             <View style={[containerStyle.container, {position: 'absolute', bottom: RFValue(20)}]}>
-                <CustomButton title={'Log Out'}></CustomButton>
+                <CustomButton style={{width: '60%'}} title={'Log Out'}></CustomButton>
             </View>
         </ScreenWrapper>
     )
