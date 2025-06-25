@@ -11,7 +11,7 @@ export default function EventButton({title, date}) {
                 <Text>{title}</Text>
                 <Text>{date}</Text>
             </View>
-            <Pressable style={{height:'100%', justifyContent:'center', alignItems: 'center'}} onPress={ButtonHandler}>
+            <Pressable style={{height:'100%', justifyContent:'center', alignItems: 'center'}}>
                 <Ionicons name={'ellipsis-vertical'} size={RFValue(20)} color={colors.pureBlack}></Ionicons>
             </Pressable>
         </TouchableOpacity>
