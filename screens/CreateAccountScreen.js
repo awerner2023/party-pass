@@ -1,8 +1,10 @@
-import {View, Text, TouchableOpacity, TextInput} from "react-native";
+import {TextInput} from "react-native";
 import {containerStyle} from "../components/styles";
 import ScreenWrapper from "../components/ScreenWrapper";
 import Spacer from "../components/Spacer";
 import CustomButton from "../components/CustomButton";
+
+const spacerSize = 10;
 
 export default function ProfileScreen() {
     return (
