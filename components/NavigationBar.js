@@ -1,14 +1,17 @@
 import {containerStyle, colors} from "./styles";
 import HomeScreen from "../screens/HomeScreen";
 import LoginScreen from "../screens/LoginScreen";
+import CreateAccountScreen from "../screens/CreateAccountScreen";
 import {NavigationContainer} from "@react-navigation/native";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import ProfileScreen from "../screens/ProfileScreen";
 import {Ionicons} from '@expo/vector-icons'
 import {RFValue} from "react-native-responsive-fontsize";
+import {createStackNavigator} from "@react-navigation/native/src/__stubs__/createStackNavigator";
 
 export default function NavigationBar() {
     const TabNavigator = createBottomTabNavigator();
+    const Stack = createStackNavigator();
     return (<NavigationContainer>
             <TabNavigator.Navigator initialRouteName="Home"
                 screenOptions = {({route}) => ({

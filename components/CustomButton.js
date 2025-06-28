@@ -4,7 +4,7 @@ import {colors, containerStyle} from "./styles";
 
 export default function CustomButton({title, style, onPress}) {
     return(
-        <TouchableOpacity style={[styles.button, containerStyle.iosShadow, style]} onPress={ () => {}}>
+        <TouchableOpacity style={[styles.button, containerStyle.iosShadow, style]} onPress={onPress}>
             <Text style={[styles.text]}>{title}</Text>
         </TouchableOpacity>
     );

@@ -24,7 +24,7 @@ export default function LoginScreen() {
                 <Spacer height={spacerSize}/>
                 <Text style={{color: colors.blueText, fontSize: RFValue(12)}}>First time using Party Pass</Text>
                 <Spacer height={3}/>
-                <CustomButton title={'Create Account'}/>
+                <CustomButton title={'Create Account'} onPress={navigation.navigate('Create Account')}/>
         </ScreenWrapper>
     )
 }

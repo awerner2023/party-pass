@@ -16,6 +16,7 @@ export default function ProfileScreen() {
             <TextInput style={containerStyle.textBoxContainer}
                        placeholder={'Password'}
             ></TextInput>
+            <Spacer height={spacerSize}/>
             <CustomButton title={"Create Account"}/>
         </ScreenWrapper>
     )
