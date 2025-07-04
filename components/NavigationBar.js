@@ -11,7 +11,6 @@ import {createStackNavigator} from "@react-navigation/native/src/__stubs__/creat
 
 export default function NavigationBar() {
     const TabNavigator = createBottomTabNavigator();
-    const Stack = createStackNavigator();
     return (<NavigationContainer>
             <TabNavigator.Navigator initialRouteName="Home"
                 screenOptions = {({route}) => ({

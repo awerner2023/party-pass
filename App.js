@@ -6,7 +6,7 @@ import HomeScreen from './screens/HomeScreen';
 import {NavigationContainer} from "@react-navigation/native";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import {SafeAreaProvider} from "react-native-safe-area-context";
-
+import StackNavigation from "./components/StackNavigation";
 
 export default function App() {
     return (

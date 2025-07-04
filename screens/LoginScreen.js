@@ -4,10 +4,12 @@ import Spacer from '../components/Spacer';
 import {RFValue} from "react-native-responsive-fontsize";
 import {colors, containerStyle} from '../components/styles'
 import ScreenWrapper from "../components/ScreenWrapper";
+import {useNavigation} from "@react-navigation/native";
 
 const spacerSize = 10;
-
+const navigation = useNavigation();
 export default function LoginScreen() {
+    const navigation = useNavigation();
     return (
         <ScreenWrapper>
                 <TextInput style={containerStyle.textBoxContainer}
@@ -24,7 +26,7 @@ export default function LoginScreen() {
                 <Spacer height={spacerSize}/>
                 <Text style={{color: colors.blueText, fontSize: RFValue(12)}}>First time using Party Pass</Text>
                 <Spacer height={3}/>
-                <CustomButton title={'Create Account'} onPress={navigation.navigate('Create Account')}/>
+                <CustomButton title={'Create Account'} onPress={()=> navigation.navigate('Create Account')}/>
         </ScreenWrapper>
     )
 }

@@ -6,7 +6,7 @@ import CustomButton from "../components/CustomButton";
 
 const spacerSize = 10;
 
-export default function ProfileScreen() {
+export default function CreateAccountScreen() {
     return (
         <ScreenWrapper>
             <TextInput style={containerStyle.textBoxContainer}
