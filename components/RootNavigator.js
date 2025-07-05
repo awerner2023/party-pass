@@ -1,4 +1,3 @@
-import {NavigationContainer} from "@react-navigation/native";
 import {Ionicons} from "@expo/vector-icons";
 import {RFValue} from "react-native-responsive-fontsize";
 import {containerStyle} from "./styles";

@@ -1,4 +1,4 @@
-import {StyleSheet, Text, TextInput, View} from 'react-native';
+import { Text, TextInput} from 'react-native';
 import CustomButton from '../components/CustomButton';
 import Spacer from '../components/Spacer';
 import {RFValue} from "react-native-responsive-fontsize";
