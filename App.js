@@ -1,17 +1,15 @@
-import { StatusBar } from 'expo-status-bar';
-import {StyleSheet, Text, View, Button, SafeAreaView} from 'react-native';
-import NavigationBar from "./components/NavigationBar";
-import LoginScreen from './screens/LoginScreen';
-import HomeScreen from './screens/HomeScreen';
+
 import {NavigationContainer} from "@react-navigation/native";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import {SafeAreaProvider} from "react-native-safe-area-context";
-import StackNavigation from "./components/StackNavigation";
+import RootNavigator from "./components/RootNavigator";
 
 export default function App() {
     return (
         <SafeAreaProvider>
-          <NavigationBar/>
+            <NavigationContainer>
+                <RootNavigator/>
+            </NavigationContainer>
         </SafeAreaProvider>
   );
 }
