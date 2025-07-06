@@ -19,7 +19,7 @@ export default function CreateAccountScreen() {
                        placeholder={'Password'}
             ></TextInput>
             <Spacer height={spacerSize}/>
-            <CustomButton title={"Create Account"}/>
+            <CustomButton title={"Create Account"} onPress={()=>navigation.navigate("MainScreen")}/>
             <Spacer height={spacerSize}/>
             <CustomButton title={"Back to Login"} onPress = {() =>navigation.navigate("Login")}/>
         </ScreenWrapper>
