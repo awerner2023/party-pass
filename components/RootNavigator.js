@@ -39,7 +39,7 @@ export default function RootNavigator() {
     return (
         <Stack.Navigator screenOptions={{headerShown: false}}>
                 <Stack.Screen name="Login" component={LoginScreen} />
-                <Stack.Screen name="Home" component={TabNavigator} />
+                <Stack.Screen name="MainScreen" component={TabNavigator} />
                 <Stack.Screen name="CreateAccount" component={CreateAccountScreen} />
         </Stack.Navigator>
     )

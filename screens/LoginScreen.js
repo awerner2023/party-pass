@@ -21,7 +21,7 @@ export default function LoginScreen() {
                 <Spacer height={spacerSize}/>
                 <Text style={{color: colors.blueText, fontSize: RFValue(12)}}> Forgot your password?</Text>
                 <Spacer height={3}/>
-                <CustomButton title={'Login'} onPress={() => navigation.navigate("Home")}/>
+                <CustomButton title={'Login'} onPress={() => navigation.navigate("MainScreen")}/>
                 <Spacer height={spacerSize}/>
                 <Text style={{color: colors.blueText, fontSize: RFValue(12)}}>First time using Party Pass</Text>
                 <Spacer height={3}/>
