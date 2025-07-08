@@ -7,6 +7,7 @@ import ProfileScreen from "../screens/ProfileScreen";
 import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
 import CreateAccountScreen from "../screens/CreateAccountScreen";
+import {NavigationContainer} from "@react-navigation/native";
 
 const isAuthenticated = false;
 const Stack = createNativeStackNavigator();
@@ -37,10 +38,12 @@ function TabNavigator() {
 
 export default function RootNavigator() {
     return (
-        <Stack.Navigator screenOptions={{headerShown: false}}>
-                <Stack.Screen name="Login" component={LoginScreen} />
-                <Stack.Screen name="MainScreen" component={TabNavigator} />
-                <Stack.Screen name="CreateAccount" component={CreateAccountScreen} />
-        </Stack.Navigator>
+        <NavigationContainer>
+            <Stack.Navigator screenOptions={{headerShown: false}}>
+                    <Stack.Screen name="Login" component={LoginScreen} />
+                    <Stack.Screen name="MainScreen" component={TabNavigator} />
+                    <Stack.Screen name="CreateAccount" component={CreateAccountScreen} />
+            </Stack.Navigator>
+        </NavigationContainer>
     )
 }
