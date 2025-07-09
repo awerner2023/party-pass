@@ -8,7 +8,7 @@ export default function ProfileScreen() {
     return (
         <ScreenWrapper>
             <View style={[containerStyle.header,{position: 'relative'}]}>
-                <Text style ={textStyles.headerText}>My Profile</Text>
+                <Text style={textStyles.headerText}>My Profile</Text>
             </View>
             <View style={containerStyle.container}>
             </View>
