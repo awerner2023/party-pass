@@ -25,12 +25,14 @@ function TabNavigator() {
                                                 iconName = focused ? 'home' : 'home-outline';
                                             } else if (route.name === 'Profile') {
                                                 iconName = focused ? 'person' : 'person-outline';
+                                            } else if (route.name === 'Map') {
+                                                iconName = focused ? 'map' : 'map-o'
                                             }
                                             return <Ionicons name={iconName} color={color} size={RFValue(24)} />
                                         },
                                         ... containerStyle.tabNavigator
                                     })}>
-                <TabNavigator.Screen name="PartyMap" component={PartyMapScreen} options={{headerShown: false}} />
+                <TabNavigator.Screen name="Map" component={PartyMapScreen} options={{headerShown: false}} />
                 <TabNavigator.Screen name="Login" component={LoginScreen} options={{headerShown: false}} />
                 <TabNavigator.Screen name='Home' component={HomeScreen} options={{headerShown: false}}/>
                 <TabNavigator.Screen name='Profile' component={ProfileScreen} options={{headerShown: false}}/>
