@@ -8,6 +8,7 @@ import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
 import CreateAccountScreen from "../screens/CreateAccountScreen";
 import {NavigationContainer} from "@react-navigation/native";
+import PartyMapScreen from "../screens/PartyMapScreen";
 
 const isAuthenticated = false;
 const Stack = createNativeStackNavigator();
@@ -29,6 +30,7 @@ function TabNavigator() {
                                         },
                                         ... containerStyle.tabNavigator
                                     })}>
+                <TabNavigator.Screen name="PartyMap" component={PartyMapScreen} options={{headerShown: false}} />
                 <TabNavigator.Screen name="Login" component={LoginScreen} options={{headerShown: false}} />
                 <TabNavigator.Screen name='Home' component={HomeScreen} options={{headerShown: false}}/>
                 <TabNavigator.Screen name='Profile' component={ProfileScreen} options={{headerShown: false}}/>
