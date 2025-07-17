@@ -26,7 +26,7 @@ function TabNavigator() {
                                             } else if (route.name === 'Profile') {
                                                 iconName = focused ? 'person' : 'person-outline';
                                             } else if (route.name === 'Map') {
-                                                iconName = focused ? 'map' : 'map-o'
+                                                iconName = focused ? 'map' : 'map-outline';
                                             }
                                             return <Ionicons name={iconName} color={color} size={RFValue(24)} />
                                         },
