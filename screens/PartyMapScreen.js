@@ -4,17 +4,17 @@ import MapView from "react-native-maps";
 import * as Location from "expo-location"
 import {containerStyle} from "../components/styles";
 import ActivityScreen from "./ActivityScreen";
+import {Alert} from "react-native";
 
 export default function PartyMapScreen() {
 
     const [location, setLocation] = useState(null);
-    const [errorMsg, setErrorMsg] = useState(null);
 
     useEffect(() => {
             (async () => {
                 let {status} = await Location.requestForegroundPermissionsAsync()
                 if (status !== 'granted') {
-                    setErrorMsg("Permission to access location was denied")
+                    Alert.alert("Permission to access location was denied")
                 }
 
                 let currentLocation = await Location.getCurrentPositionAsync()

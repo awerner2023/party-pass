@@ -29,12 +29,12 @@ export const containerStyle = StyleSheet.create({
         backgroundColor: colors.whiteBackground,
     },
     scrollView: {
-      flex: 1,
-      width: '100%',
+        flex: 1,
+        width: '100%',
     },
     scrollViewButtonAlignment: {
-      justifyContent: 'center',
-      alignItems: 'center',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     eventView: {
         flex: 1,
@@ -54,7 +54,7 @@ export const containerStyle = StyleSheet.create({
         justifyContent: 'space-between',
         backgroundColor: colors.pureWhite,
     },
-        //IOS shadow settings
+    //IOS shadow settings
     iosShadow: {
         shadowColor: colors.pureBlack,
         shadowOffset: {width: 0, height: 2},
