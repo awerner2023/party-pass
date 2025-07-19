@@ -2,7 +2,7 @@ import ScreenWrapper from "../components/ScreenWrapper";
 import {useEffect, useState} from "react";
 import MapView, {Marker} from "react-native-maps";
 import * as Location from "expo-location"
-import {containerStyle} from "../components/styles";
+import {containerStyle, colors} from "../components/styles";
 import {ActivityIndicator, View} from "react-native";
 
 export default function PartyMapScreen() {
@@ -12,8 +12,8 @@ export default function PartyMapScreen() {
 
     useEffect(() => {
             (async () => {
-                let {getPermission} = await Location.getForegroundPermissionsAsync()
-                if (getPermission !== 'granted') {
+                let {status} = await Location.requestForegroundPermissionsAsync()
+                if (status !== 'granted') {
                     setErrorMsg("Permission to access location was denied")
                 }
 
@@ -25,7 +25,7 @@ export default function PartyMapScreen() {
     if (!location) {
         return (
             <View style={containerStyle.loadingScreen}>
-                <ActivityIndicator size={'large'} color={'#0000ff'}/>
+                <ActivityIndicator size={'large'} color={colors.purpleBackground} />
             </View>
         )
     }
