@@ -1,9 +1,9 @@
 import ScreenWrapper from "../components/ScreenWrapper";
 import {useEffect, useState} from "react";
-import MapView, {Marker} from "react-native-maps";
+import MapView from "react-native-maps";
 import * as Location from "expo-location"
-import {containerStyle, colors} from "../components/styles";
-import {ActivityIndicator, View} from "react-native";
+import {containerStyle} from "../components/styles";
+import ActivityScreen from "./ActivityScreen";
 
 export default function PartyMapScreen() {
 
@@ -24,9 +24,7 @@ export default function PartyMapScreen() {
         []);
     if (!location) {
         return (
-            <View style={containerStyle.loadingScreen}>
-                <ActivityIndicator size={'large'} color={colors.purpleBackground} />
-            </View>
+            <ActivityScreen/>
         )
     }
     return (
