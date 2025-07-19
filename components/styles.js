@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
 import {RFValue} from "react-native-responsive-fontsize";
 
 export const colors = {
@@ -93,5 +93,16 @@ export const containerStyle = StyleSheet.create({
             fontStyle: 'System',
             fontSize: RFValue(15),
         },
+    },
+
+    map: {
+        width: Dimensions.get("window").width,
+        height: Dimensions.get("window").height,
+    },
+
+    loadingScreen: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
     }
 })

@@ -34,8 +34,8 @@ function TabNavigator() {
                                     })}>
                 <TabNavigator.Screen name="Map" component={PartyMapScreen} options={{headerShown: false}} />
                 <TabNavigator.Screen name="Login" component={LoginScreen} options={{headerShown: false}} />
-                <TabNavigator.Screen name='Home' component={HomeScreen} options={{headerShown: false}}/>
-                <TabNavigator.Screen name='Profile' component={ProfileScreen} options={{headerShown: false}}/>
+                <TabNavigator.Screen name="Home" component={HomeScreen} options={{headerShown: false}}/>
+                <TabNavigator.Screen name="Profile" component={ProfileScreen} options={{headerShown: false}}/>
             </TabNavigator.Navigator>
     );
 }
