@@ -15,6 +15,7 @@ export default function PartyMapScreen() {
                 let {status} = await Location.requestForegroundPermissionsAsync()
                 if (status !== 'granted') {
                     Alert.alert("Permission to access location was denied")
+                    return;
                 }
 
                 let currentLocation = await Location.getCurrentPositionAsync()
