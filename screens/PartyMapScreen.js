@@ -31,6 +31,7 @@ export default function PartyMapScreen() {
     return (
         <ScreenWrapper>
             <MapView style={containerStyle.map}
+                     provider={null}
                      showsUserLocation={true}
                      initialRegion={{
                          latitude: location.latitude,
