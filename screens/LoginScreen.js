@@ -21,9 +21,9 @@ export default function LoginScreen() {
         if(user) {
             navigation.navigate('MainScreen')
         } else {
-            Alert.alert('Login Failed!', error.message)
+            Alert.alert('Login Failed!', error)
         }
-    }
+    };
 
     return (
         <ScreenWrapper>
