@@ -5,9 +5,10 @@ import {RFValue} from "react-native-responsive-fontsize";
 import {colors, containerStyle} from '../components/styles'
 import ScreenWrapper from "../components/ScreenWrapper";
 import {useNavigation} from "@react-navigation/native";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {loginUser} from "../Firebase/firebaseAuth";
-
+import {auth} from "../Firebase/firebase"
+import {onAuthStateChanged} from "firebase/auth"
 
 const spacerSize = 10;
 
@@ -24,6 +25,14 @@ export default function LoginScreen() {
             Alert.alert('Login Failed!', error)
         }
     };
+
+    useEffect(() => {
+        const rememberUser = onAuthStateChanged(auth,(user)=> {
+            if(user) {
+                navigation.navigate("MainScreen")
+            }
+        })
+    });
 
     return (
         <ScreenWrapper>
