@@ -9,8 +9,8 @@ import {createNativeStackNavigator} from "@react-navigation/native-stack";
 import CreateAccountScreen from "../screens/CreateAccountScreen";
 import {NavigationContainer} from "@react-navigation/native";
 import PartyMapScreen from "../screens/PartyMapScreen";
+import CheckAuth from "../screens/CheckAuth";
 
-const isAuthenticated = false;
 const Stack = createNativeStackNavigator();
 
 function TabNavigator() {
@@ -43,6 +43,7 @@ export default function RootNavigator() {
     return (
         <NavigationContainer>
             <Stack.Navigator screenOptions={{headerShown: false}}>
+                    <Stack.Screen name="CheckAuth" component={CheckAuth}/>
                     <Stack.Screen name="Login" component={LoginScreen} />
                     <Stack.Screen name="MainScreen" component={TabNavigator} />
                     <Stack.Screen name="CreateAccount" component={CreateAccountScreen} />

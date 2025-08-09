@@ -9,6 +9,7 @@ import {useEffect, useState} from "react";
 import {loginUser} from "../Firebase/firebaseAuth";
 import {auth} from "../Firebase/firebase"
 import {onAuthStateChanged} from "firebase/auth"
+import firebaseApp from "firebase/compat";
 
 const spacerSize = 10;
 
@@ -27,12 +28,15 @@ export default function LoginScreen() {
     };
 
     useEffect(() => {
-        const rememberUser = onAuthStateChanged(auth,(user)=> {
+        const userEmailVerified = onAuthStateChanged(auth, (user) => {
             if(user) {
-                navigation.navigate("MainScreen")
+                console.log(user.email);
+            } else {
+                console.log("User not verified");
             }
+            return() => userEmailVerified();
         })
-    });
+    },[]);
 
     return (
         <ScreenWrapper>
