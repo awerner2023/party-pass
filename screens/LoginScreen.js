@@ -27,17 +27,6 @@ export default function LoginScreen() {
         }
     };
 
-    useEffect(() => {
-        const userEmailVerified = onAuthStateChanged(auth, (user) => {
-            if(user) {
-                console.log(user.email);
-            } else {
-                console.log("User not verified");
-            }
-            return() => userEmailVerified();
-        })
-    },[]);
-
     return (
         <ScreenWrapper>
                 <TextInput style={containerStyle.textBoxContainer}

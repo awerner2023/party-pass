@@ -6,32 +6,33 @@ import CustomButton from "../components/CustomButton";
 import {useNavigation} from "@react-navigation/native";
 import {signOut} from "firebase/auth";
 import {auth} from "../Firebase/firebase";
+import {createUser} from "../Firebase/firebaseAuth";
+import {useState} from "react";
 
 const spacerSize = 10;
 
 export default function CreateAccountScreen() {
+    const [email,setEmail] = useState('')
+    const [password, setPassword] = useState('')
     const navigation = useNavigation();
-    const logOut = async () => {
-        try {
-            await signOut(auth);
-            navigation.navigate('Login');
-        } catch (error) {
-            return error;
-        }
-    }
+
     return (
         <ScreenWrapper>
             <TextInput style={containerStyle.textBoxContainer}
-                       placeholder={'Username'}
+                       placeholder={'Email'}
+                       value={email}
+                       onChangeText={setEmail}
             ></TextInput>
             <Spacer height={spacerSize}/>
             <TextInput style={containerStyle.textBoxContainer}
                        placeholder={'Password'}
+                       value={password}
+                       onChangeText={setPassword}
             ></TextInput>
             <Spacer height={spacerSize}/>
-            <CustomButton title={"Create Account"} onPress={()=>navigation.navigate("MainScreen")}/>
+            <CustomButton title={"Create Account"} onPress={createUser(email,password)}/>
             <Spacer height={spacerSize}/>
-            <CustomButton title={"Back to Login"} onPress = {logOut()}/>
+            <CustomButton title={"Back to Login"} onPress = {navigation.navigate("Login")}/>
         </ScreenWrapper>
     )
 }

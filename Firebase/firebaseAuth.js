@@ -13,6 +13,7 @@ export const loginUser = async (email,password) => {
 export const createUser = async (email,password) => {
     try {
         const newUserInfo = await createUserWithEmailAndPassword(auth, email, password)
+        await signInWithEmailAndPassword(auth,email,password)
         return {user: newUserInfo}
     } catch(error){
         return {error: error.message}
