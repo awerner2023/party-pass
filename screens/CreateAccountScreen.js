@@ -4,8 +4,6 @@ import ScreenWrapper from "../components/ScreenWrapper";
 import Spacer from "../components/Spacer";
 import CustomButton from "../components/CustomButton";
 import {useNavigation} from "@react-navigation/native";
-import {signOut} from "firebase/auth";
-import {auth} from "../Firebase/firebase";
 import {createUser} from "../Firebase/firebaseAuth";
 import {useState} from "react";
 
