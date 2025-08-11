@@ -16,22 +16,24 @@ export default function App() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        const checkAuth = onAuthStateChanged(auth,(u)=>{
-            if(u) {
+        const checkAuth = onAuthStateChanged(auth, (u) => {
+            if (u) {
                 setUser(u);
-                console.log(u.email)
+                console.log(u.email);
             } else {
+                setUser(null);
                 console.log("user not found");
             }
             setLoading(false);
         })
         return () => checkAuth()
-    },[]);
+    }, []);
 
     if (loading) {
         return (
             <ActivityScreen/>
-        )}
+        )
+    }
 
     return (
         <SafeAreaProvider>
@@ -41,8 +43,8 @@ export default function App() {
                         <Stack.Screen name="MainScreen" component={TabNavigator}/>
                     ) : (
                         <>
-                        <Stack.Screen name="Login" component={LoginScreen}/>
-                        <Stack.Screen name="CreateAccount" component={CreateAccountScreen} />
+                            <Stack.Screen name="Login" component={LoginScreen}/>
+                            <Stack.Screen name="CreateAccount" component={CreateAccountScreen}/>
                         </>
                     )}
                 </Stack.Navigator>
