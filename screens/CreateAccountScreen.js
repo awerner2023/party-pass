@@ -1,4 +1,4 @@
-import {TextInput} from "react-native";
+import {Alert, TextInput} from "react-native";
 import {containerStyle} from "../components/styles";
 import ScreenWrapper from "../components/ScreenWrapper";
 import Spacer from "../components/Spacer";
@@ -14,6 +14,15 @@ export default function CreateAccountScreen() {
     const [password, setPassword] = useState('')
     const navigation = useNavigation();
 
+    const handleCreateAccount = async() => {
+        const {user,error} = await createUser({email,password})
+        if(user){
+            navigation.navigate("MainScreen")
+        }else {
+            Alert.alert(error.message)
+        }
+    };
+
     return (
         <ScreenWrapper>
             <TextInput style={containerStyle.textBoxContainer}
@@ -28,9 +37,9 @@ export default function CreateAccountScreen() {
                        onChangeText={setPassword}
             ></TextInput>
             <Spacer height={spacerSize}/>
-            <CustomButton title={"Create Account"} onPress={createUser(email,password)}/>
+            <CustomButton title={"Create Account"} onPress={handleCreateAccount}/>
             <Spacer height={spacerSize}/>
-            <CustomButton title={"Back to Login"} onPress = {navigation.navigate("Login")}/>
+            <CustomButton title={"Back to Login"} onPress = {()=>navigation.navigate("Login")}/>
         </ScreenWrapper>
     )
 }
