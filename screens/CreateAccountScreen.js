@@ -1,4 +1,4 @@
-import {Alert, TextInput} from "react-native";
+import {Alert, ScrollView, TextInput} from "react-native";
 import {containerStyle} from "../components/styles";
 import ScreenWrapper from "../components/ScreenWrapper";
 import Spacer from "../components/Spacer";
@@ -25,21 +25,23 @@ export default function CreateAccountScreen() {
 
     return (
         <ScreenWrapper>
-            <TextInput style={containerStyle.textBoxContainer}
-                       placeholder={'Email'}
-                       value={email}
-                       onChangeText={setEmail}
-            ></TextInput>
-            <Spacer height={spacerSize}/>
-            <TextInput style={containerStyle.textBoxContainer}
-                       placeholder={'Password'}
-                       value={password}
-                       onChangeText={setPassword}
-            ></TextInput>
-            <Spacer height={spacerSize}/>
-            <CustomButton title={"Create Account"} onPress={handleCreateAccount}/>
-            <Spacer height={spacerSize}/>
-            <CustomButton title={"Back to Login"} onPress = {()=>navigation.navigate("Login")}/>
+            <ScrollView style={containerStyle.scrollView} contentContainerStyle={containerStyle.scrollViewButtonAlignment}>
+                <TextInput style={containerStyle.textBoxContainer}
+                           placeholder={'Email'}
+                           value={email}
+                           onChangeText={setEmail}
+                ></TextInput>
+                <Spacer height={spacerSize}/>
+                <TextInput style={containerStyle.textBoxContainer}
+                           placeholder={'Password'}
+                           value={password}
+                           onChangeText={setPassword}
+                ></TextInput>
+                <Spacer height={spacerSize}/>
+                <CustomButton title={"Create Account"} onPress={handleCreateAccount}/>
+                <Spacer height={spacerSize}/>
+                <CustomButton title={"Back to Login"} onPress = {()=>navigation.navigate("Login")}/>
+            </ScrollView>
         </ScreenWrapper>
     )
 }

@@ -33,6 +33,7 @@ export const containerStyle = StyleSheet.create({
         width: '100%',
     },
     scrollViewButtonAlignment: {
+        flexGrow: 1,
         justifyContent: 'center',
         alignItems: 'center',
     },

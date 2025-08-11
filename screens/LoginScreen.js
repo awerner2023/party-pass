@@ -1,4 +1,4 @@
-import {Alert, Text, TextInput} from 'react-native';
+import {Alert, ScrollView, Text, TextInput} from 'react-native';
 import CustomButton from '../components/CustomButton';
 import Spacer from '../components/Spacer';
 import {RFValue} from "react-native-responsive-fontsize";
@@ -29,6 +29,7 @@ export default function LoginScreen() {
 
     return (
         <ScreenWrapper>
+            <ScrollView style={containerStyle.scrollView} contentContainerStyle={containerStyle.scrollViewButtonAlignment}>
                 <TextInput style={containerStyle.textBoxContainer}
                            placeholder={'Email'}
                            value={email} onChangeText={setEmail}
@@ -46,6 +47,7 @@ export default function LoginScreen() {
                 <Text style={{color: colors.blueText, fontSize: RFValue(12)}}>First time using Party Pass</Text>
                 <Spacer height={3}/>
                 <CustomButton title={'Create Account'} onPress={()=> navigation.navigate('CreateAccount')}/>
+            </ScrollView>
         </ScreenWrapper>
     )
 }
