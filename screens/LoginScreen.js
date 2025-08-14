@@ -29,7 +29,7 @@ export default function LoginScreen() {
 
     return (<ScreenWrapper>
         <ScrollView style={containerStyle.scrollView}
-                    contentContainerStyle={containerStyle.scrollViewButtonAlignment}>
+                    contentContainerStyle={containerStyle.scrollViewPageAlignment}>
             <TextInput style={containerStyle.textBoxContainer}
                        placeholder={'Email'}
                        value={email} onChangeText={setEmail}

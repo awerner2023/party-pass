@@ -16,9 +16,9 @@ export const createUser = async (email, password) => {
     try {
         const newUserInfo = await createUserWithEmailAndPassword(auth, email, password)
         await signInWithEmailAndPassword(auth, email, password)
-        return {user: newUserInfo}
+        return {user: newUserInfo.user, error:null}
     } catch (error) {
-        return {error: error.message}
+        return {user: null, error}
     }
 }
 

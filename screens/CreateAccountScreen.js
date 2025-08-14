@@ -15,7 +15,7 @@ export default function CreateAccountScreen() {
     const navigation = useNavigation();
 
     const handleCreateAccount = async () => {
-        const {user, error} = await createUser({email, password})
+        const {user, error} = await createUser(email, password)
         if (user) {
             navigation.navigate("MainScreen")
         } else {
@@ -25,7 +25,7 @@ export default function CreateAccountScreen() {
 
     return (<ScreenWrapper>
             <ScrollView style={containerStyle.scrollView}
-                        contentContainerStyle={containerStyle.scrollViewButtonAlignment}>
+                        contentContainerStyle={containerStyle.scrollViewPageAlignment}>
                 <TextInput style={containerStyle.textBoxContainer}
                            placeholder={'Email'}
                            value={email}
@@ -36,6 +36,7 @@ export default function CreateAccountScreen() {
                            placeholder={'Password'}
                            value={password}
                            onChangeText={setPassword}
+                           secureTextEntry={true}
                 ></TextInput>
                 <Spacer height={spacerSize}/>
                 <CustomButton title={"Create Account"} onPress={handleCreateAccount}/>
