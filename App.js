@@ -30,27 +30,19 @@ export default function App() {
     }, []);
 
     if (loading) {
-        return (
-            <ActivityScreen/>
-        )
+        return (<ActivityScreen/>)
     }
 
-    return (
-        <SafeAreaProvider>
+    return (<SafeAreaProvider>
             <NavigationContainer>
                 <Stack.Navigator screenOptions={{headerShown: false}}>
-                    {user ? (
-                        <Stack.Screen name="MainScreen" component={TabNavigator}/>
-                    ) : (
-                        <>
+                    {user ? (<Stack.Screen name="MainScreen" component={TabNavigator}/>) : (<>
                             <Stack.Screen name="Login" component={LoginScreen}/>
                             <Stack.Screen name="CreateAccount" component={CreateAccountScreen}/>
-                        </>
-                    )}
+                        </>)}
                 </Stack.Navigator>
             </NavigationContainer>
-        </SafeAreaProvider>
-    )
+        </SafeAreaProvider>)
 };
 
 

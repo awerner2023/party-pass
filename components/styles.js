@@ -13,29 +13,19 @@ export const colors = {
 
 export const textStyles = {
     headerText: {
-        fontStyle: 'System',
-        fontWeight: RFValue(600),
-        fontSize: RFValue(30),
-        color: colors.whiteBackground
+        fontStyle: 'System', fontWeight: RFValue(600), fontSize: RFValue(30), color: colors.whiteBackground
     }
 }
 
 export const containerStyle = StyleSheet.create({
     container: {
-        flex: 1,
-        width: '100%',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: colors.whiteBackground,
+        flex: 1, width: '100%', justifyContent: 'center', alignItems: 'center', backgroundColor: colors.whiteBackground,
     },
     scrollView: {
-        flex: 1,
-        width: '100%',
+        flex: 1, width: '100%',
     },
     scrollViewButtonAlignment: {
-        flexGrow: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+        flexGrow: 1, justifyContent: 'center', alignItems: 'center',
     },
     eventView: {
         flex: 1,
@@ -54,13 +44,10 @@ export const containerStyle = StyleSheet.create({
         width: '90%',
         justifyContent: 'space-between',
         backgroundColor: colors.pureWhite,
-    },
-    //IOS shadow settings
+    }, //IOS shadow settings
+
     iosShadow: {
-        shadowColor: colors.pureBlack,
-        shadowOffset: {width: 0, height: 2},
-        shadowOpacity: 0.2,
-        shadowRadius: 5,
+        shadowColor: colors.pureBlack, shadowOffset: {width: 0, height: 2}, shadowOpacity: 0.2, shadowRadius: 5,
     },
     textBoxContainer: {
         height: RFValue(40),
@@ -80,30 +67,19 @@ export const containerStyle = StyleSheet.create({
     },
     tabNavigator: {
         tabBarStyle: {
-            paddingVertical: RFValue(20),
-            backgroundColor: colors.purpleBackground,
-            marginBottom: RFValue(15),
-        },
-        tabBarItemStyle: {
-            alignItems: 'center',
-            justifyContent: 'space-between',
-        },
-        tabBarActiveTintColor: colors.pureWhite,
-        tabBarInactiveTintColor: colors.pureBlack,
-        tabBarLabelStyle: {
-            fontStyle: 'System',
-            fontSize: RFValue(15),
+            paddingVertical: RFValue(20), backgroundColor: colors.purpleBackground, marginBottom: RFValue(15),
+        }, tabBarItemStyle: {
+            alignItems: 'center', justifyContent: 'space-between',
+        }, tabBarActiveTintColor: colors.pureWhite, tabBarInactiveTintColor: colors.pureBlack, tabBarLabelStyle: {
+            fontStyle: 'System', fontSize: RFValue(15),
         },
     },
 
     map: {
-        width: Dimensions.get("window").width,
-        height: Dimensions.get("window").height,
+        width: Dimensions.get("window").width, height: Dimensions.get("window").height,
     },
 
     loadingScreen: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+        flex: 1, justifyContent: 'center', alignItems: 'center',
     }
 })

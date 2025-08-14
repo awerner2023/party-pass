@@ -10,22 +10,22 @@ import {useState} from "react";
 const spacerSize = 10;
 
 export default function CreateAccountScreen() {
-    const [email,setEmail] = useState('')
+    const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const navigation = useNavigation();
 
-    const handleCreateAccount = async() => {
-        const {user,error} = await createUser({email,password})
-        if(user){
+    const handleCreateAccount = async () => {
+        const {user, error} = await createUser({email, password})
+        if (user) {
             navigation.navigate("MainScreen")
-        }else {
+        } else {
             Alert.alert(error.message)
         }
     };
 
-    return (
-        <ScreenWrapper>
-            <ScrollView style={containerStyle.scrollView} contentContainerStyle={containerStyle.scrollViewButtonAlignment}>
+    return (<ScreenWrapper>
+            <ScrollView style={containerStyle.scrollView}
+                        contentContainerStyle={containerStyle.scrollViewButtonAlignment}>
                 <TextInput style={containerStyle.textBoxContainer}
                            placeholder={'Email'}
                            value={email}
@@ -40,8 +40,7 @@ export default function CreateAccountScreen() {
                 <Spacer height={spacerSize}/>
                 <CustomButton title={"Create Account"} onPress={handleCreateAccount}/>
                 <Spacer height={spacerSize}/>
-                <CustomButton title={"Back to Login"} onPress = {()=>navigation.navigate("Login")}/>
+                <CustomButton title={"Back to Login"} onPress={() => navigation.navigate("Login")}/>
             </ScrollView>
-        </ScreenWrapper>
-    )
+        </ScreenWrapper>)
 }

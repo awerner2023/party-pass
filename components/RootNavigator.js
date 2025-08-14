@@ -8,10 +8,9 @@ import PartyMapScreen from "../screens/PartyMapScreen";
 
 export default function TabNavigator() {
     const TabNavigator = createBottomTabNavigator();
-    return (
-            <TabNavigator.Navigator initialRouteName="Home"
-                                    screenOptions = {({route}) => ({
-                                        tabBarIcon: ({focused,color, size}) => {
+    return (<TabNavigator.Navigator initialRouteName="Home"
+                                    screenOptions={({route}) => ({
+                                        tabBarIcon: ({focused, color, size}) => {
                                             let iconName;
 
                                             if (route.name === 'Home') {
@@ -21,13 +20,11 @@ export default function TabNavigator() {
                                             } else if (route.name === 'Map') {
                                                 iconName = focused ? 'map' : 'map-outline';
                                             }
-                                            return <Ionicons name={iconName} color={color} size={RFValue(24)} />
-                                        },
-                                        ... containerStyle.tabNavigator
+                                            return <Ionicons name={iconName} color={color} size={RFValue(24)}/>
+                                        }, ...containerStyle.tabNavigator
                                     })}>
-                <TabNavigator.Screen name="Map" component={PartyMapScreen} options={{headerShown: false}} />
-                <TabNavigator.Screen name="Home" component={HomeScreen} options={{headerShown: false}}/>
-                <TabNavigator.Screen name="Profile" component={ProfileScreen} options={{headerShown: false}}/>
-            </TabNavigator.Navigator>
-    );
+            <TabNavigator.Screen name="Map" component={PartyMapScreen} options={{headerShown: false}}/>
+            <TabNavigator.Screen name="Home" component={HomeScreen} options={{headerShown: false}}/>
+            <TabNavigator.Screen name="Profile" component={ProfileScreen} options={{headerShown: false}}/>
+        </TabNavigator.Navigator>);
 };

@@ -9,9 +9,8 @@ import {signOutUser} from "../Firebase/firebaseAuth";
 export default function ProfileScreen() {
     const navigation = useNavigation();
 
-    return (
-        <ScreenWrapper>
-            <View style={[containerStyle.header,{position: 'relative'}]}>
+    return (<ScreenWrapper>
+            <View style={[containerStyle.header, {position: 'relative'}]}>
                 <Text style={textStyles.headerText}>My Profile</Text>
             </View>
             <View style={containerStyle.container}>
@@ -22,6 +21,5 @@ export default function ProfileScreen() {
             <View style={[containerStyle.container, {position: 'absolute', bottom: RFValue(40)}]}>
                 <CustomButton style={{width: '60%'}} title={'Log Out'} onPress={signOutUser}></CustomButton>
             </View>
-        </ScreenWrapper>
-    )
+        </ScreenWrapper>)
 }
