@@ -12,9 +12,14 @@ const spacerSize = 10;
 export default function CreateAccountScreen() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const [passwordConfirm, setPasswordConfirm] = useState('')
     const navigation = useNavigation();
 
     const handleCreateAccount = async () => {
+        if (password !== passwordConfirm) {
+            Alert.alert("Passwords do not match")
+            return;
+        }
         const {user, error} = await createUser(email, password)
         if (user) {
             navigation.navigate("MainScreen")
@@ -36,6 +41,13 @@ export default function CreateAccountScreen() {
                            placeholder={'Password'}
                            value={password}
                            onChangeText={setPassword}
+                           secureTextEntry={true}
+                ></TextInput>
+                <Spacer height={spacerSize}/>
+                <TextInput style={containerStyle.textBoxContainer}
+                           placeholder={'Confirm Password'}
+                           value={passwordConfirm}
+                           onChangeText={setPasswordConfirm}
                            secureTextEntry={true}
                 ></TextInput>
                 <Spacer height={spacerSize}/>
