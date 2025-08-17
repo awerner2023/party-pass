@@ -29,31 +29,31 @@ export default function CreateAccountScreen() {
     };
 
     return (<ScreenWrapper>
-            <ScrollView style={containerStyle.scrollView}
-                        contentContainerStyle={containerStyle.scrollViewPageAlignment}>
-                <TextInput style={containerStyle.textBoxContainer}
-                           placeholder={'Email'}
-                           value={email}
-                           onChangeText={setEmail}
-                ></TextInput>
-                <Spacer height={spacerSize}/>
-                <TextInput style={containerStyle.textBoxContainer}
-                           placeholder={'Password'}
-                           value={password}
-                           onChangeText={setPassword}
-                           secureTextEntry={true}
-                ></TextInput>
-                <Spacer height={spacerSize}/>
-                <TextInput style={containerStyle.textBoxContainer}
-                           placeholder={'Confirm Password'}
-                           value={passwordConfirm}
-                           onChangeText={setPasswordConfirm}
-                           secureTextEntry={true}
-                ></TextInput>
-                <Spacer height={spacerSize}/>
-                <CustomButton title={"Create Account"} onPress={handleCreateAccount}/>
-                <Spacer height={spacerSize}/>
-                <CustomButton title={"Back to Login"} onPress={() => navigation.navigate("Login")}/>
-            </ScrollView>
-        </ScreenWrapper>)
+        <ScrollView style={containerStyle.scrollView}
+                    contentContainerStyle={containerStyle.scrollViewPageAlignment}>
+            <TextInput style={containerStyle.textBoxContainer}
+                       placeholder={'Email'}
+                       value={email}
+                       onChangeText={setEmail}
+            ></TextInput>
+            <Spacer height={spacerSize}/>
+            <TextInput style={containerStyle.textBoxContainer}
+                       placeholder={'Password'}
+                       value={password}
+                       onChangeText={setPassword}
+                       secureTextEntry={true}
+            ></TextInput>
+            <Spacer height={spacerSize}/>
+            <TextInput style={containerStyle.textBoxContainer}
+                       placeholder={'Confirm Password'}
+                       value={passwordConfirm}
+                       onChangeText={setPasswordConfirm}
+                       secureTextEntry={true}
+            ></TextInput>
+            <Spacer height={spacerSize}/>
+            <CustomButton title={"Create Account"} onPress={handleCreateAccount}/>
+            <Spacer height={spacerSize}/>
+            <CustomButton title={"Back to Login"} onPress={() => navigation.navigate("Login")}/>
+        </ScrollView>
+    </ScreenWrapper>)
 }
