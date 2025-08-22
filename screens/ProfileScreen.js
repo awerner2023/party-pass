@@ -1,13 +1,11 @@
-import {View, Text, Alert} from "react-native";
+import {View, Text} from "react-native";
 import {containerStyle, textStyles} from "../components/styles";
 import ScreenWrapper from "../components/ScreenWrapper";
 import CustomButton from "../components/CustomButton";
 import {RFValue} from "react-native-responsive-fontsize";
-import {useNavigation} from "@react-navigation/native";
 import {signOutUser} from "../Firebase/firebaseAuth";
 
 export default function ProfileScreen() {
-    const navigation = useNavigation();
 
     return (<ScreenWrapper>
         <View style={[containerStyle.header, {position: 'relative'}]}>

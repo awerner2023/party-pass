@@ -7,7 +7,7 @@ import ActivityScreen from "./screens/ActivityScreen";
 import LoginScreen from "./screens/LoginScreen";
 import CreateAccountScreen from "./screens/CreateAccountScreen";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
-import TabNavigator from "./components/RootNavigator";
+import TabNavigator from "./components/TabNavigator";
 
 const Stack = createNativeStackNavigator();
 

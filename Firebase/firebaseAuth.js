@@ -1,7 +1,6 @@
 import {auth} from './firebase'
 import {signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut} from 'firebase/auth'
 import {Alert} from "react-native";
-import {useNavigation} from "@react-navigation/native";
 
 export const loginUser = async (email, password) => {
     try {
