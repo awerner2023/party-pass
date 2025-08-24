@@ -5,11 +5,8 @@ import {RFValue} from "react-native-responsive-fontsize";
 import {colors, containerStyle} from '../components/styles'
 import ScreenWrapper from "../components/ScreenWrapper";
 import {useNavigation} from "@react-navigation/native";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import {loginUser} from "../Firebase/firebaseAuth";
-import {auth} from "../Firebase/firebase"
-import {onAuthStateChanged} from "firebase/auth"
-import firebaseApp from "firebase/compat";
 
 const spacerSize = 10;
 
